@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Relax</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title><%= [@page_title, 'dd'].compact.join(" | ") %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<%= render 'layouts/header' %>
+<div class="split left overflow-scroll">
+<%=render 'layouts/sidebar'%>
+</div>
+<div class="split right overflow-scroll">
+    
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+  <div class="container-fluid">
+      <%= yield %>
+</div>
+     <hr class="rounded">
+      <%= render 'layouts/footer' %>
+  
+   </div> 
+    
+ 
+</body>
+</html>

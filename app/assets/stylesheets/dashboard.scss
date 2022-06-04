@@ -1,0 +1,28 @@
+#sidenav a {
+    font-family: "Segoe UI",Arial,sans-serif;
+    text-decoration: none;
+    display: block;
+    padding: 2px 1px 1px 16px;
+}
+
+#sidenav a.active {
+    background-color: #04AA6D!important;
+    color: #ffffff!important;
+}
+
+#sidenav a:hover, #sidenav a:focus {
+    color: #000000;
+    background-color: #cccccc;
+}
+
+#pagetop {
+    position: relative;
+    z-index: 4;
+    font-size: 18px;
+    background-color: white;
+    color: #282A35;
+    padding-left: 12px;
+    padding-right: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+

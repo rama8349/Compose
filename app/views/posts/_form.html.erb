@@ -1,0 +1,8 @@
+<%=simple_form_for @post, name: 'post_form',:remote => true do |f|%>
+<%=f.input :titile%>
+<%=f.input :author_type, collection:['User', 'Guest', 'Admin'], prompt: 'Select' %>
+<%=f.input :blog_body%>
+<%=f.button :submit%>
+<%end%>
+
+
